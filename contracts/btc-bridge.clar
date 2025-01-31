@@ -131,7 +131,7 @@
                 recipient: recipient,
                 processed: false,
                 confirmations: u0,
-                timestamp: block-height,
+                timestamp: stacks-block-height,
                 btc-sender: btc-sender
             }))
             
@@ -167,7 +167,7 @@
         (let
             ((validated-signature {
                 signature: signature,
-                timestamp: block-height
+                timestamp: stacks-block-height
             }))
             
             (map-set validator-signatures
@@ -216,7 +216,7 @@
             sender: tx-sender,
             amount: amount,
             btc-recipient: btc-recipient,
-            timestamp: block-height
+            timestamp: stacks-block-height
         })
         
         (var-set total-bridged-amount (- (var-get total-bridged-amount) amount))
